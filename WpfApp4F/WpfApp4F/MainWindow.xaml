@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp4F.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4F"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox Name="squadreListBox" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="300" SelectionChanged="squadreListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Nome}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+        <ListBox Name="calciatoriListBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="205,0,0,0" Width="400" Height="300">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Nome}" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Età}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</Window>
